@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>ToDo Web MVC Sample</title>
+</head>
+<body>
+
+    <h1>ToDo Web MVC</h1>
+
+    <ul>
+        <li th:each="todo :  ${spisok}">
+            <span th:text="${todo.title}">title</span>
+        </li>
+    </ul>
+
+</body>
+</html>

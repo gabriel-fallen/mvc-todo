@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>ToDo Web MVC Sample</title>
+</head>
+<body>
+
+<h1>What's to be done?</h1>
+
+<form action="#" th:action="@{/}" th:object="${todo}" method="post">
+    <label for="id">ID:</label>
+    <input type="text" id="id" th:field="*{id}" /> <br/>
+
+    <label for="title">Title:</label>
+    <input type="text" id="title" th:field="*{title}" />
+    <span style="color: red;" th:if="${#fields.hasErrors('title')}" th:errors="*{title}" >Errors</span> <br/>
+    <input type="submit" value="Submit" />
+</form>
+
+</body>
+</html>
